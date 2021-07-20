@@ -1,0 +1,219 @@
+<html>
+<head>
+<title>TestNG:  Test(failed)</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test(failed)</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/10/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Jul 17 21:50:44 IST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>3 seconds (3953 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testSuite.Contacts_Runner.runScenario()'><b>runScenario</b><br>Test class: testSuite.Contacts_Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Launch Salesforce site and Login", "Optional[Check the Contact and Delete]"</td>
+<td><div><pre>java.lang.NullPointerException
+	at pages.HomePage.isHomeDisplyed(HomePage.java:105)
+	at testSuite.StepDefinations_Contacts.user_is_on_Dashboard(StepDefinations_Contacts.java:16)
+	at ?.User Salesforce Dashboard Page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Contacts.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace342198178", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace342198178'><pre>java.lang.NullPointerException
+	at pages.HomePage.isHomeDisplyed(HomePage.java:105)
+	at testSuite.StepDefinations_Contacts.user_is_on_Dashboard(StepDefinations_Contacts.java:16)
+	at ?.User Salesforce Dashboard Page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Contacts.feature:6)
+</pre></div></td>
+<td>0</td>
+<td>testSuite.Contacts_Runner@4bb4de6a</td></tr>
+<tr>
+<td title='testSuite.Login_Runner.runScenario()'><b>runScenario</b><br>Test class: testSuite.Login_Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Launch Salesforce site and Login", "Optional[validate Login functionality]"</td>
+<td><div><pre>java.lang.NullPointerException
+	at pages.LoginPage.validateurl(LoginPage.java:89)
+	at testSuite.StepDefinations_Login.user_is_on_salesforce_login_page(StepDefinations_Login.java:15)
+	at ?.User is on salesforce Login Page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Login.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace761750706", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace761750706'><pre>java.lang.NullPointerException
+	at pages.LoginPage.validateurl(LoginPage.java:89)
+	at testSuite.StepDefinations_Login.user_is_on_salesforce_login_page(StepDefinations_Login.java:15)
+	at ?.User is on salesforce Login Page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Login.feature:6)
+</pre></div></td>
+<td>0</td>
+<td>testSuite.Login_Runner@7ba18f1b</td></tr>
+<tr>
+<td title='testSuite.Logout_Runner.runScenario()'><b>runScenario</b><br>Test class: testSuite.Logout_Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logout from Sales from Dashboard", "Optional[validate Logout functionality]"</td>
+<td><div><pre>java.lang.NullPointerException
+	at pages.HomePage.isHomeDisplyed(HomePage.java:105)
+	at testSuite.StepDefinations_Contacts.user_is_on_Dashboard(StepDefinations_Contacts.java:16)
+	at ?.User Salesforce Dashboard Page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Logout.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace598357562", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace598357562'><pre>java.lang.NullPointerException
+	at pages.HomePage.isHomeDisplyed(HomePage.java:105)
+	at testSuite.StepDefinations_Contacts.user_is_on_Dashboard(StepDefinations_Contacts.java:16)
+	at ?.User Salesforce Dashboard Page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Logout.feature:5)
+</pre></div></td>
+<td>0</td>
+<td>testSuite.Logout_Runner@2f8f5f62</td></tr>
+<tr>
+<td title='testSuite.Lead_Runner.runScenario()'><b>runScenario</b><br>Test class: testSuite.Lead_Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Click New Lead", "Optional[Create a new Lead,Update Lead and validate functionality]"</td>
+<td><div><pre>java.lang.NullPointerException
+	at pages.HomePage.isHomeDisplyed(HomePage.java:105)
+	at testSuite.StepDefinations_Leads.user_is_on_salesforce_dashboard_page(StepDefinations_Leads.java:28)
+	at ?.User is on salesforce Dashboard Page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Leads.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1521238608", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1521238608'><pre>java.lang.NullPointerException
+	at pages.HomePage.isHomeDisplyed(HomePage.java:105)
+	at testSuite.StepDefinations_Leads.user_is_on_salesforce_dashboard_page(StepDefinations_Leads.java:28)
+	at ?.User is on salesforce Dashboard Page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Leads.feature:6)
+</pre></div></td>
+<td>0</td>
+<td>testSuite.Lead_Runner@1068e947</td></tr>
+<tr>
+<td title='testSuite.Lead_Runner.runScenario()'><b>runScenario</b><br>Test class: testSuite.Lead_Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Save Lead  by filling the form", "Optional[Create a new Lead,Update Lead and validate functionality]"</td>
+<td><div><pre>java.lang.NullPointerException
+	at pages.HomePage.isNewleadFormDisplyed(HomePage.java:86)
+	at testSuite.StepDefinations_Leads.user_is_on_load_form_page(StepDefinations_Leads.java:45)
+	at ?.User is on load form page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Leads.feature:12)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1878413714", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1878413714'><pre>java.lang.NullPointerException
+	at pages.HomePage.isNewleadFormDisplyed(HomePage.java:86)
+	at testSuite.StepDefinations_Leads.user_is_on_load_form_page(StepDefinations_Leads.java:45)
+	at ?.User is on load form page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Leads.feature:12)
+</pre></div></td>
+<td>0</td>
+<td>testSuite.Lead_Runner@1068e947</td></tr>
+<tr>
+<td title='testSuite.Lead_Runner.runScenario()'><b>runScenario</b><br>Test class: testSuite.Lead_Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Edit Lead Data and Check", "Optional[Create a new Lead,Update Lead and validate functionality]"</td>
+<td><div><pre>java.lang.NullPointerException
+	at pages.EditLead.isEditLead_Displayed(EditLead.java:26)
+	at testSuite.StepDefinations_Leads.user_is_on_present_saved_lead_deatils_page(StepDefinations_Leads.java:83)
+	at ?.User is on   Present Saved Lead Deatils Page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Leads.feature:22)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1889757798", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1889757798'><pre>java.lang.NullPointerException
+	at pages.EditLead.isEditLead_Displayed(EditLead.java:26)
+	at testSuite.StepDefinations_Leads.user_is_on_present_saved_lead_deatils_page(StepDefinations_Leads.java:83)
+	at ?.User is on   Present Saved Lead Deatils Page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Leads.feature:22)
+</pre></div></td>
+<td>0</td>
+<td>testSuite.Lead_Runner@1068e947</td></tr>
+<tr>
+<td title='testSuite.Lead_Runner.runScenario()'><b>runScenario</b><br>Test class: testSuite.Lead_Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Move Lead to contact", "Optional[Create a new Lead,Update Lead and validate functionality]"</td>
+<td><div><pre>java.lang.NullPointerException
+	at pages.EditLead.isEditLead_Displayed(EditLead.java:26)
+	at testSuite.StepDefinations_Leads.user_is_on_present_saved_lead_deatils_page(StepDefinations_Leads.java:83)
+	at ?.User is on   Present Saved Lead Deatils Page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Leads.feature:34)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1048712791", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1048712791'><pre>java.lang.NullPointerException
+	at pages.EditLead.isEditLead_Displayed(EditLead.java:26)
+	at testSuite.StepDefinations_Leads.user_is_on_present_saved_lead_deatils_page(StepDefinations_Leads.java:83)
+	at ?.User is on   Present Saved Lead Deatils Page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Leads.feature:34)
+</pre></div></td>
+<td>0</td>
+<td>testSuite.Lead_Runner@1068e947</td></tr>
+<tr>
+<td title='testSuite.Lead_Runner.runScenario()'><b>runScenario</b><br>Test class: testSuite.Lead_Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "WebtoLead", "Optional[Create a new Lead,Update Lead and validate functionality]"</td>
+<td><div><pre>java.lang.NullPointerException
+	at pages.HomePage.isHomeDisplyed(HomePage.java:105)
+	at testSuite.StepDefinations_Leads.user_is_on_salesforce_dashboard_page(StepDefinations_Leads.java:28)
+	at ?.User is on salesforce Dashboard Page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Leads.feature:54)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1446001495", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1446001495'><pre>java.lang.NullPointerException
+	at pages.HomePage.isHomeDisplyed(HomePage.java:105)
+	at testSuite.StepDefinations_Leads.user_is_on_salesforce_dashboard_page(StepDefinations_Leads.java:28)
+	at ?.User is on salesforce Dashboard Page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Leads.feature:54)
+</pre></div></td>
+<td>0</td>
+<td>testSuite.Lead_Runner@1068e947</td></tr>
+<tr>
+<td title='testSuite.Lead_Runner.runScenario()'><b>runScenario</b><br>Test class: testSuite.Lead_Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Import Lead from csv File", "Optional[Create a new Lead,Update Lead and validate functionality]"</td>
+<td><div><pre>java.lang.NullPointerException
+	at pages.HomePage.isHomeDisplyed(HomePage.java:105)
+	at testSuite.StepDefinations_Leads.user_is_on_salesforce_dashboard_page(StepDefinations_Leads.java:28)
+	at ?.User is on salesforce Dashboard Page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Leads.feature:66)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1141113940", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1141113940'><pre>java.lang.NullPointerException
+	at pages.HomePage.isHomeDisplyed(HomePage.java:105)
+	at testSuite.StepDefinations_Leads.user_is_on_salesforce_dashboard_page(StepDefinations_Leads.java:28)
+	at ?.User is on salesforce Dashboard Page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Leads.feature:66)
+</pre></div></td>
+<td>0</td>
+<td>testSuite.Lead_Runner@1068e947</td></tr>
+<tr>
+<td title='testSuite.Lead_Runner.runScenario()'><b>runScenario</b><br>Test class: testSuite.Lead_Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "get  picklist data using Object Manager", "Optional[Create a new Lead,Update Lead and validate functionality]"</td>
+<td><div><pre>java.lang.NullPointerException
+	at pages.HomePage.isHomeDisplyed(HomePage.java:105)
+	at testSuite.StepDefinations_Leads.user_is_on_salesforce_dashboard_page(StepDefinations_Leads.java:28)
+	at ?.User is on salesforce Dashboard Page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Leads.feature:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace589363823", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace589363823'><pre>java.lang.NullPointerException
+	at pages.HomePage.isHomeDisplyed(HomePage.java:105)
+	at testSuite.StepDefinations_Leads.user_is_on_salesforce_dashboard_page(StepDefinations_Leads.java:28)
+	at ?.User is on salesforce Dashboard Page(file:///C:/Users/veeresh/git/repository/Saleforce/src/test/java/testSuite/Leads.feature:91)
+</pre></div></td>
+<td>0</td>
+<td>testSuite.Lead_Runner@1068e947</td></tr>
+</table><p>
+</body>
+</html>
