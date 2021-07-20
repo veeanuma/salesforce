@@ -30,7 +30,7 @@ public class LoginPage  extends Base
 	
 	public void uidFill() throws Exception
 	{ 
-		exttest=report.createTest("Login-Page Test");
+		
 		try
 	   {
 		String x = PropertiesFileUtilities.getValueInPropertiesFile("uid");
@@ -74,10 +74,12 @@ public class LoginPage  extends Base
 	
 	public String validateurl() throws Exception
 	{
+		exttest=report.createTest("Login-Page Test");
 		String x = PropertiesFileUtilities.getValueInPropertiesFile("url");
 		URL u=new URL(x);
 		HttpURLConnection con=(HttpURLConnection)u.openConnection();
 		con.connect();
+		
 		if(con.getResponseMessage().equalsIgnoreCase("OK"))
 		{
 			exttest.log(Status.PASS,"Url Working Properly");

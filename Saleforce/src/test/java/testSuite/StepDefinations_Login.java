@@ -12,7 +12,7 @@ public class StepDefinations_Login {
 	HomePage hp=new HomePage();
 	@Given("^User is on salesforce Login Page$")
     public void user_is_on_salesforce_login_page() throws Throwable {
-	// Lp.validateurl();
+	 Lp.validateurl();
     }
 
 	
