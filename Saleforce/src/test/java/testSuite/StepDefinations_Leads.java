@@ -26,6 +26,7 @@ public class StepDefinations_Leads
 	 @Given("^User is on salesforce Dashboard Page$")
 	    public void user_is_on_salesforce_dashboard_page() throws Throwable {
 		 hp.isHomeDisplyed();
+		    //at home page
 	        
 	    }
 	 
