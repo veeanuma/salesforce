@@ -5,7 +5,7 @@
   <version>1.0</version>
   <description>Saleforce</description>
   <dependencies>
-  <!-- for browser drivers -->
+  <!--- for browser drivers -->
      <dependency>
     <groupId>io.github.bonigarcia</groupId>
     <artifactId>webdrivermanager</artifactId>
