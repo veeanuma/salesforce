@@ -43,7 +43,7 @@
 </dependency>
 
 
-<!-- for non web elements if exists -->
+<!-- for non web elements if exists --->
 
 <dependency>
     <groupId>ru.yandex.qatools.ashot</groupId>
