@@ -9,7 +9,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.aventstack.extentreports.Status;
@@ -39,11 +38,13 @@ public class Verify_Picklist_ObjectManager extends Base
 		wait.until(ExpectedConditions.visibilityOf(Elements_Leads.setupgear)).click();
 		//Thread.sleep(2000);
 		wait.until(ExpectedConditions.visibilityOf(Elements_Leads.setupbtn)).click();
+		exttest.log(Status.PASS," Click on gear symbol Pass");
 		
 		return (true);
 		}
 		catch(Exception ex)
 		{
+			exttest.log(Status.FAIL," Click on gear symbol Fail");
 			takescreenshot();
 			return (false);
 		}
@@ -63,13 +64,14 @@ public class Verify_Picklist_ObjectManager extends Base
 			} 
 		
 			wait.until(ExpectedConditions.elementToBeClickable(Elements_Leads.getstarted)).isDisplayed();
-			exttest.log(Status.PASS,"Get Started visible  pass");
 			wait.until(ExpectedConditions.elementToBeClickable(Elements_Leads.objectmanager)).click();
+			exttest.log(Status.PASS,"Get Started visible  pass");
 			
 			return(true);
 			}
 			catch(Exception ex)
 			{
+				exttest.log(Status.FAIL,"get started  visible fail");
 				takescreenshot();
 				return (false);
 			}	
@@ -82,11 +84,12 @@ public class Verify_Picklist_ObjectManager extends Base
 			{
 			wait.until(ExpectedConditions.visibilityOf(Elements_Leads.clickonlable)).click();
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[text()='Details']"))).isDisplayed();
-			
+			exttest.log(Status.PASS,"click on Lable pass");
 			return (true);
 			}
 			catch(Exception ex)
 			{
+				exttest.log(Status.FAIL,"click on Lable Fail");
 				takescreenshot();
 				return (false);
 			}
@@ -100,11 +103,12 @@ public class Verify_Picklist_ObjectManager extends Base
 			{
 			wait.until(ExpectedConditions.visibilityOf(Elements_Leads.clickoFiledsandrelations)).click();
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@title='Custom Field']"))).isDisplayed();
-			
+			exttest.log(Status.PASS,"click on Filed and relations Pass");
 			return (true);
 			}
 			catch(Exception ex)
 			{
+				exttest.log(Status.FAIL,"click on Filed and relations Fail");
 				takescreenshot();
 				return (false);
 			}
@@ -117,11 +121,12 @@ public class Verify_Picklist_ObjectManager extends Base
 			{
 			
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//span[text()='Industry'])[1]"))).click();
-			
+			exttest.log(Status.PASS,"click on item pass");
 			return (true);
 			}
 			catch(Exception ex)
 			{
+				exttest.log(Status.FAIL,"click on item failed");
 				takescreenshot();
 				return (false);
 			}
@@ -131,16 +136,26 @@ public class Verify_Picklist_ObjectManager extends Base
 		{
 			try
 			{
-				Thread.sleep(10000);
+				Boolean b=true;
+				while(b)
+				{
+					try
+					{
 					driver.switchTo().frame(0);
 					wait.until(ExpectedConditions.visibilityOf(Elements_Leads.filedinfo)).isDisplayed();
+					b=false;
+					}
+					catch(Exception e)
+					{
+						Thread.sleep(1000);
+					}
+				}
 			
 		WebElement wtable=	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//table[@class='list'])[3]")));
 			List<WebElement>l=wtable.findElements(By.xpath("//th[@scope='row']"));
 			for(WebElement ee:l)
 			{
 				String x=(String)driver.executeScript("return arguments[0].textContent;",ee);
-				System.out.println(x);
 				items.add(x);
 				items.sort(Comparator.comparing( String::toString ));
 			
@@ -148,11 +163,11 @@ public class Verify_Picklist_ObjectManager extends Base
 			
 			driver.switchTo().parentFrame();
 		
-			
+			exttest.log(Status.PASS,"Picking values in list pass");
 			return (true);
 			}
 			catch(Exception ex)
-			{
+			{	exttest.log(Status.FAIL,"Picking values in list failed");
 				takescreenshot();
 				return (false);
 			}
@@ -161,13 +176,10 @@ public class Verify_Picklist_ObjectManager extends Base
 		
 		public void backtosalesforcedb() throws Exception
 		{
-			Thread.sleep(5000);
+			
 			driver.close();
-			s=driver.getWindowHandles();
-		    	a=new ArrayList<String>(s);
 	    	driver.switchTo().window(a.get(0));
-	    	//Makedelay(Elements_Leads.leadslink,driver);
-		wait.until(ExpectedConditions.visibilityOf(Elements_Leads.leadslink)).isDisplayed();
+	    	Makedelay(Elements_Leads.leadslink,driver);
 	    	hp.clicknewleads();	
 	    
 		}
@@ -192,21 +204,21 @@ public class Verify_Picklist_ObjectManager extends Base
 						
 			}
 			ditems.sort(Comparator.comparing( String::toString ));
-			exttest.log(Status.PASS,"Read Industry");
+			exttest.log(Status.PASS,"Read Industry pass ");
 			
 			}
 			catch(Exception ex)
 			{
-				exttest.log(Status.FAIL,"Read Industry");
+				exttest.log(Status.FAIL,"Read Industry fail ");
 				takescreenshot();
 			}
 		}	
 		
 		public void comparelist()
 		{
-			exttest=report.createTest("List s compare  Test");
+			//exttest=report.createTest("List s compare  Test");
 			 if (items.equals(ditems) == true) {
-		            exttest.log(Status.PASS,"Both lists are same");
+		          exttest.log(Status.PASS,"Both lists are same");
 		        }
 		        else {
 		            System.out.println(" Array List are not equal");
