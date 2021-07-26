@@ -131,20 +131,7 @@ public class Verify_Picklist_ObjectManager extends Base
 		{
 			try
 			{
-				Boolean b=true;
-				while(b)
-				{
-					try
-					{
-					driver.switchTo().frame(0);
-					wait.until(ExpectedConditions.visibilityOf(Elements_Leads.filedinfo)).isDisplayed();
-					b=false;
-					}
-					catch(Exception e)
-					{
-						Thread.sleep(1000);
-					}
-				}
+				Thread.sleep(10000);
 			
 		WebElement wtable=	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//table[@class='list'])[3]")));
 			List<WebElement>l=wtable.findElements(By.xpath("//th[@scope='row']"));
@@ -171,7 +158,7 @@ public class Verify_Picklist_ObjectManager extends Base
 		
 		public void backtosalesforcedb() throws Exception
 		{
-			
+			Thread.sleep(5000);
 			driver.close();
 			s=driver.getWindowHandles();
 		    	a=new ArrayList<String>(s);
