@@ -5,7 +5,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.sikuli.script.Screen;
 
 import com.aventstack.extentreports.Status;
 
@@ -184,7 +183,8 @@ public class ImportLead extends Base
 	public Boolean AutomateOpenWindowdialoge() throws Exception
 	{
 		
-		try {
+	/*	
+	try {
 			Screen s=new Screen();
 			if(s.exists("src\\test\\resources\\testimages\\filename.PNG",10)!=null)
 			{
@@ -205,6 +205,8 @@ public class ImportLead extends Base
 			takescreenshot();
 			return(false);
 		}
+	*/	
+		
 	}
 	
 	public void clickNext() throws Exception
