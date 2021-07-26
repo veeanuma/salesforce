@@ -142,7 +142,7 @@ public class Verify_Picklist_ObjectManager extends Base
 				items.sort(Comparator.comparing( String::toString ));
 			
 			}
-			
+			System.out.println(items);
 			driver.switchTo().parentFrame();
 		
 			
