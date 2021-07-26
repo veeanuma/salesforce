@@ -132,6 +132,8 @@ public class Verify_Picklist_ObjectManager extends Base
 			try
 			{
 				Thread.sleep(10000);
+					driver.switchTo().frame(0);
+					wait.until(ExpectedConditions.visibilityOf(Elements_Leads.filedinfo)).isDisplayed();
 			
 		WebElement wtable=	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//table[@class='list'])[3]")));
 			List<WebElement>l=wtable.findElements(By.xpath("//th[@scope='row']"));
