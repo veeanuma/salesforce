@@ -159,6 +159,8 @@ public class ImportLead extends Base
 		  Thread.sleep(5000);
 		String path=System.getProperty("user.dir")+"\\src\\test\\resources\\Datafiles\\importlead.csv";
 		driver.switchTo().frame(0);
+		driver.executeScript("arguments[0].scrollIntoView(true);", Elements_Leads.helplink);
+		driver.executeScript("arguments[0].style.display='block';",Elements_Leads.choosefile);
 		Elements_Leads.choosefile.sendKeys(path);
 		driver.switchTo().defaultContent();
 		
