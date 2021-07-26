@@ -173,8 +173,11 @@ public class Verify_Picklist_ObjectManager extends Base
 		{
 			
 			driver.close();
+			s=driver.getWindowHandles();
+		    	a=new ArrayList<String>(s);
 	    	driver.switchTo().window(a.get(0));
-	    	Makedelay(Elements_Leads.leadslink,driver);
+	    	//Makedelay(Elements_Leads.leadslink,driver);
+		wait.until(ExpectedConditions.visibilityOf(Elements_Leads.leadslink)).isDisplayed();
 	    	hp.clicknewleads();	
 	    
 		}
