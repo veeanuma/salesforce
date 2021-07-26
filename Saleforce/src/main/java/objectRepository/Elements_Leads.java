@@ -47,7 +47,7 @@ public class Elements_Leads
 	
 	@FindBy(how=How.XPATH,using="//*[@name='SaveEdit']")
 	public static WebElement Savebtn;
-	@FindBy(how=How.XPATH,using="//*[@name='CancelEdit']")
+	@FindBy(how=How.XPATH,using="//button[@title='Close this window']")
 	public static WebElement Cancelbtn;
 	
 	
