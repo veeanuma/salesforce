@@ -138,11 +138,12 @@ public class Verify_Picklist_ObjectManager extends Base
 			for(WebElement ee:l)
 			{
 				String x=(String)driver.executeScript("return arguments[0].textContent;",ee);
+				System.out.println(x);
 				items.add(x);
 				items.sort(Comparator.comparing( String::toString ));
 			
 			}
-			System.out.println(items);
+			
 			driver.switchTo().parentFrame();
 		
 			
