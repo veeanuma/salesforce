@@ -106,6 +106,7 @@ public class ImportLead extends Base
 	{
 		
 		try {
+		       Thread.sleep(10000);
 			driver.switchTo().frame(0);
 			wait.until(ExpectedConditions.elementToBeClickable(Elements_Leads.importLeads)).click();
 			driver.switchTo().defaultContent();
