@@ -128,7 +128,7 @@ public class HomePage extends Base
 				if(wait.until(ExpectedConditions.visibilityOf(Elements_Leads.Homebtn)).isDisplayed())
 				{
 				exttest.log(Status.PASS,"Home Page Displayed");
-				closebtn();
+				
 				}
 				return(true);
 			}
