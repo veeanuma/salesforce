@@ -185,11 +185,9 @@ public class Verify_Picklist_ObjectManager extends Base
 		wait.until(ExpectedConditions.visibilityOf(Elements_Leads.Homebtn)).isDisplayed();
 	    	//Makedelay(Elements_Leads.leadslink,driver);
 		hp=new HomePage();
-               hp.clickleads();
-	       System.out.println("leads clicked");
-	       hp.isAllleadsvisible();
 	       hp.clicknewleads();
 	       System.out.println("new leads clicked");
+	       hp.isNewleadFormDisplyed();
 	    
 		}
 		
@@ -199,7 +197,7 @@ public class Verify_Picklist_ObjectManager extends Base
 			exttest=report.createTest("Read Industry Test");
 			try
 			{
-				//Thread.sleep(2000);
+				Thread.sleep(2000);
 			WebElement drpIndustry =wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//*[@class='slds-combobox_container'])[4]//child::div[2]")));
 			driver.executeScript("arguments[0].scrollIntoView(true);", drpIndustry);
 			driver.executeScript("arguments[0].click();",drpIndustry);
