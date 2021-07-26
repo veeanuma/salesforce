@@ -173,13 +173,13 @@ public class ImportLead extends Base
 			//wait.until(ExpectedConditions.elementToBeClickable(Elements_Leads.choosefile)).click();
 			driver.switchTo().defaultContent();
 			exttest.log(Status.PASS,"click on Choose file  pass");
-			return(true);
+			
 			}
 		catch(Exception ex)
 		{
 			exttest.log(Status.FAIL,"click on Choose file  failed");
 			takescreenshot();
-			return(false);
+			
 		}
 		
 	}
