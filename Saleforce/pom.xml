@@ -5,13 +5,13 @@
   <version>1.0</version>
   <description>Saleforce</description>
   <dependencies>
-  <!--- for browser drivers ---->
+  <!-- for browser drivers -->
      <dependency>
     <groupId>io.github.bonigarcia</groupId>
     <artifactId>webdrivermanager</artifactId>
     <version>4.4.1</version>
 </dependency>
-<!--- for site automation --->
+<!-- for site automation -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
@@ -23,7 +23,7 @@
     <artifactId>ngwebdriver</artifactId>
     <version>1.1.6</version>
 </dependency>
-<!--- for Framework--->
+<!-- for Framework-->
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
@@ -43,7 +43,7 @@
 </dependency>
 
 
-<!--- for non web elements if exists --->
+<!-- for non web elements if exists -->
 
 <dependency>
     <groupId>ru.yandex.qatools.ashot</groupId>
