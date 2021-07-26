@@ -32,6 +32,28 @@ public class HomePage extends Base
 		//this.Driver=driver;
 		//this.Wait=wait;
 	}
+	public void closebtn() throws Exception
+	{ 
+		
+		try
+	   {
+			
+			if(wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@title='Close']"))).isDisplayed())
+			{
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@title='Close']"))).click();
+			}
+			
+			
+			
+	   }
+		catch(Exception ex)
+		{
+		
+		}
+		
+	}
+	
+	
 	public void clickleads() throws Exception
 	{
 		exttest=report.createTest("Leads Test");
@@ -106,6 +128,7 @@ public class HomePage extends Base
 				if(wait.until(ExpectedConditions.visibilityOf(Elements_Leads.Homebtn)).isDisplayed())
 				{
 				exttest.log(Status.PASS,"Home Page Displayed");
+				closebtn();
 				}
 				return(true);
 			}
