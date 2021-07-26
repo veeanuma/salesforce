@@ -180,7 +180,7 @@ public class ImportLead extends Base
 		}
 	}
 	
-	public Boolean AutomateOpenWindowdialoge() throws Exception
+	public void AutomateOpenWindowdialoge() throws Exception
 	{
 		
 	/*	
