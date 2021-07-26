@@ -2,7 +2,7 @@
 @Leads
 Feature: Create a new Lead,Update Lead and validate functionality
 
-    @regressiontest
+   @regressiontest
   Scenario: get  picklist data using Object Manager
     Given User is on salesforce Dashboard Page
     When Click on setup Gear Symbol
