@@ -7,7 +7,6 @@ Scenario: Click New Lead
     When Click Lead Object and click new Lead
     Then Lead form Should be displayed
 
-
   Scenario Outline: Save Lead  by filling the form
     Given User is on load form page
     And enter firstName as "<firstName>" middleName as "<middleName>" lastname as "<lastname>"  salutation as "<salutation>" Website as "<Website>" suffix as "<suffix>" Company  as "<Company>" Email as "<Email>" MobilePhone as "<MobilePhone>" industry as "<industry>" Leadsource as "<Leadsource>"    details to fill
