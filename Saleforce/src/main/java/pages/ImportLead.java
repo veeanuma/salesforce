@@ -154,7 +154,7 @@ public class ImportLead extends Base
 			return(false);
 		}
 	}
-	public Boolean clickonChoosefile() throws Exception
+	public void clickonChoosefile() throws Exception
 	{
 		  Thread.sleep(5000);
 		String path=System.getProperty("user.dir")+"\\src\\test\\resources\\Datafiles\\importlead.csv";
