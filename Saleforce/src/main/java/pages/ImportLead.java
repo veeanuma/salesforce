@@ -183,29 +183,11 @@ public class ImportLead extends Base
 	public void AutomateOpenWindowdialoge() throws Exception
 	{
 		
-	/*	
-	try {
-			Screen s=new Screen();
-			if(s.exists("src\\test\\resources\\testimages\\filename.PNG",10)!=null)
-			{
-				s.click("src\\test\\resources\\testimages\\filename.PNG");
-				String path=System.getProperty("user.dir")+"\\src\\test\\resources\\Datafiles\\importlead.csv";
-				s.type(path);
-				s.click("src\\test\\resources\\testimages\\open.PNG");
-			exttest.log(Status.PASS,"Open Window Dialouge  Automation Test  pass");
-			}
-			
-			return(true);
+	        Thread.sleep(3000);
+		String path=System.getProperty("user.dir")+"\\src\\test\\resources\\Datafiles\\importlead.csv";
 		
-			
-		}
-		catch(Exception ex)
-		{
-			exttest.log(Status.FAIL,"Open Window Dialouge  Automation Test failed");
-			takescreenshot();
-			return(false);
-		}
-	*/	
+		Runtime.getRuntime().exec("src\\test\\resources\\extrajars\\auupload.exe"+" "+path);
+		Thread.sleep(7000);
 		
 	}
 	
