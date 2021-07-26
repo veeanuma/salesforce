@@ -184,7 +184,12 @@ public class Verify_Picklist_ObjectManager extends Base
 		Thread.sleep(5000);
 		wait.until(ExpectedConditions.visibilityOf(Elements_Leads.Homebtn)).isDisplayed();
 	    	//Makedelay(Elements_Leads.leadslink,driver);
-	    	hp.clicknewleads();	
+		hp=new HomePage();
+               hp.clickleads();
+	       System.out.println("leads clicked");
+	       hp.isAllleadsvisible();
+	       hp.clicknewleads();
+	       System.out.println("new leads clicked");
 	    
 		}
 		
