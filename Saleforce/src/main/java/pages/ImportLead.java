@@ -161,7 +161,7 @@ public class ImportLead extends Base
 		driver.switchTo().frame(0);
 		driver.executeScript("arguments[0].scrollIntoView(true);", Elements_Leads.helplink);
 		driver.executeScript("arguments[0].style.display='block';",Elements_Leads.choosefile);
-		Elements_Leads.choosefile.sendKeys(path);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='file']"))).sendKeys(path);
 		driver.switchTo().defaultContent();
 		
 	}
