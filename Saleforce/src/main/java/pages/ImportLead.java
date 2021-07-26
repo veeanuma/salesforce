@@ -185,16 +185,22 @@ public class ImportLead extends Base
 		
 	        Thread.sleep(3000);
 		String path=System.getProperty("user.dir")+"\\src\\test\\resources\\Datafiles\\importlead.csv";
-		
+		System.out.println(path);
 		Runtime.getRuntime().exec("src\\test\\resources\\extrajars\\auupload.exe"+" "+path);
 		Thread.sleep(7000);
-		
+		if(Elements_Leads.choosefile.getText().isEmpty())
+		{
+		Elements_Leads.choosefile.sendKeys(path);
+		System.out.println(".exe file not working");
+		}
+		Elements_Leads.choosefile.sendKeys(path);
 	}
 	
 	public void clickNext() throws Exception
 	{
 		
 		try {
+			Thread.sleep(5000);
 			driver.switchTo().frame(0);
 			wait.until(ExpectedConditions.elementToBeClickable(Elements_Leads.importNextbtn)).click();
 			driver.switchTo().defaultContent();
