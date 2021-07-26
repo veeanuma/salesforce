@@ -11,7 +11,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -59,7 +58,6 @@ public static void reportintialize() throws Exception
 	//String bn=context.getSuite().getName();
 	su=new WebsiteUtility();
 	driver=su.openBrowser(bn);
-	driver.setFileDetector(new LocalFileDetector());
 	wait=su.defineWait(driver);
 	su.launchSite(driver);
 	driver.manage().window().maximize();
