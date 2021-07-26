@@ -52,10 +52,10 @@ public class Base
     public static Elements_Contacts objcon=new Elements_Contacts();
 	
 @BeforeSuite
-public static void reportintialize(ITestContext context) throws Exception
+public static void reportintialize() throws Exception
 {
-	//String bn=PropertiesFileUtilities.getValueInPropertiesFile("browsername");
-	String bn=context.getSuite().getName();
+	String bn=PropertiesFileUtilities.getValueInPropertiesFile("browsername");
+	//String bn=context.getSuite().getName();
 	su=new WebsiteUtility();
 	driver=su.openBrowser(bn);
 	wait=su.defineWait(driver);
