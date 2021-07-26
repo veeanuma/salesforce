@@ -2,6 +2,20 @@
 @Leads
 Feature: Create a new Lead,Update Lead and validate functionality
 
+@regressiontest
+  Scenario Outline: WebtoLead
+    Given User is on salesforce Dashboard Page
+    When Navigate to url
+    Then webtoLead form Should be displayed
+    And Fill Form"<firstName>","<lastname>","<salutation>","<phone>","<email>","<city>","<state>","<Company>"
+    When Click on Submit button
+    Then its automatically Navigate to salesforce.com
+
+    Examples: 
+      | salutation | firstName | lastname  | email           | phone      | city     | state     | Company |
+      | Mr.        | Sreenu    | Anuamndla | veeru@gmail.com | 9553109052 | Warangal | Telangana | IBM     |
+
+
    @regressiontest
   Scenario: get  picklist data using Object Manager
     Given User is on salesforce Dashboard Page
