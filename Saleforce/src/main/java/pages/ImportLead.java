@@ -158,7 +158,9 @@ public class ImportLead extends Base
 	{
 		  Thread.sleep(5000);
 		String path=System.getProperty("user.dir")+"\\src\\test\\resources\\Datafiles\\importlead.csv";
+		driver.switchTo().frame(0);
 		Elements_Leads.choosefile.sendKeys(path);
+		driver.switchTo().defaultContent();
 		
 	}
 	
