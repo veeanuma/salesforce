@@ -78,5 +78,5 @@ Scenario: Click New Lead
     Then it will opens with picklist values
     And Read table of list of item values
     And close the tab and move to salesforce Dashboard Page open new lead form
-		And Read List from Form
-		And Compare both Lists After Sort
+    And Read List from Form
+   And Compare both Lists After Sort
