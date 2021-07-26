@@ -116,7 +116,7 @@
             <version>3.0.0-M3</version>
             <configuration>
             <suiteXmlFiles>
-            <suiteXmlFile>RunChrome.xml</suiteXmlFile>
+            <suiteXmlFile>RunOpera.xml</suiteXmlFile>
             </suiteXmlFiles>
             </configuration>
             
