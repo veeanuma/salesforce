@@ -27,6 +27,28 @@ public class LoginPage  extends Base
 	}
 	
 	
+	public void closebtn() throws Exception
+	{ 
+		
+		try
+	   {
+			
+			if(wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@title='Close']"))).isDisplayed())
+			{
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@title='Close']"))).click();
+			}
+			
+			
+			
+	   }
+		catch(Exception ex)
+		{
+		
+		}
+		
+	}
+	
+	
 	
 	public void uidFill() throws Exception
 	{ 
@@ -63,6 +85,7 @@ public class LoginPage  extends Base
 		   {
 		wait.until(ExpectedConditions.elementToBeClickable(Elements_Login.loginbtn)).click();
 		exttest.log(Status.PASS,"Login Button Working Properly");
+		closebtn();
 		
 		   }
 		catch(Exception ex)
