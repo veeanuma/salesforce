@@ -32,26 +32,7 @@ public class HomePage extends Base
 		//this.Driver=driver;
 		//this.Wait=wait;
 	}
-	public void closebtn() throws Exception
-	{ 
-		
-		try
-	   {
-			
-			if(wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@title='Close']"))).isDisplayed())
-			{
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@title='Close']"))).click();
-			}
-			
-			
-			
-	   }
-		catch(Exception ex)
-		{
-		
-		}
-		
-	}
+	
 	
 	
 	public void clickleads() throws Exception
