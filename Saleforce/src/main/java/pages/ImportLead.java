@@ -1,11 +1,10 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
+
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.sikuli.script.Screen;
 
 import com.aventstack.extentreports.Status;
 
@@ -106,8 +105,8 @@ public class ImportLead extends Base
 	{
 		
 		try {
-		       Thread.sleep(10000);
 			driver.switchTo().frame(0);
+			Thread.sleep(5000);
 			wait.until(ExpectedConditions.elementToBeClickable(Elements_Leads.importLeads)).click();
 			driver.switchTo().defaultContent();
 			exttest.log(Status.PASS,"click on  leads pass");
@@ -156,30 +155,70 @@ public class ImportLead extends Base
 			return(false);
 		}
 	}
-	public void clickonChoosefile() throws Exception
+	public Boolean clickonChoosefile() throws Exception
 	{
-		  Thread.sleep(5000);
-		String path=System.getProperty("user.dir")+"\\src\\test\\resources\\Datafiles\\importlead.csv";
+		
+		try {
+			
 		driver.switchTo().frame(0);
 		driver.executeScript("arguments[0].scrollIntoView(true);", Elements_Leads.helplink);
-		driver.executeScript("arguments[0].style.display='block';",Elements_Leads.choosefile);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='file']"))).sendKeys("C:\\Users\\veeresh\\git\\repository\\Saleforce\\src\\test\\resources\\Datafiles\\importlead.csv");
-		driver.switchTo().defaultContent();
-		
+			driver.executeScript("arguments[0].style.display='block';",Elements_Leads.choosefile);
+		//	Elements_Leads.choosefile.sendKeys("C:\\Users\\veeresh\\git\\repository\\Saleforce\\src\\test\\resources\\Datafiles\\importlead.csv");
+			driver.executeScript("arguments[0].style.border='3px solid red'",Elements_Leads.choosefile);
+			Elements_Leads.choosefile.click();
+			//driver.executeScript("arguments[0].click;",Elements_Leads.choosefile);
+			//act.moveToElement(Elements_Leads.choosefile).click();
+			//wait.until(ExpectedConditions.elementToBeClickable(Elements_Leads.choosefile)).click();
+			driver.switchTo().defaultContent();
+			exttest.log(Status.PASS,"click on Choose file  pass");
+			return(true);
+			}
+		catch(Exception ex)
+		{
+			exttest.log(Status.FAIL,"click on Choose file  failed");
+			takescreenshot();
+			return(false);
+		}
 	}
 	
-	public void AutomateOpenWindowdialoge() throws Exception
+	public Boolean AutomateOpenWindowdialoge() throws Exception
 	{
 		
-
+		try {
+			Screen s=new Screen();
+			if(s.exists("src\\test\\resources\\testimages\\filename.PNG",10)!=null)
+			{
+				s.click("src\\test\\resources\\testimages\\filename.PNG");
+				String path=System.getProperty("user.dir")+"\\src\\test\\resources\\Datafiles\\importlead.csv";
+				System.out.println(path);
+				s.type(path);
+				s.click("src\\test\\resources\\testimages\\open.PNG");
+			exttest.log(Status.PASS,"Open Window Dialouge  Automation Test  pass");
+			}
+			
+			return(true);
+		
+			
+		}
+		catch(Exception ex)
+		{
+			exttest.log(Status.FAIL,"Open Window Dialouge  Automation Test failed");
+			takescreenshot();
+			return(false);
+		}
 	}
+	
+	
+	
+	
+	
 	
 	public void clickNext() throws Exception
 	{
 		
 		try {
-			Thread.sleep(5000);
 			driver.switchTo().frame(0);
+			Thread.sleep(3000);
 			wait.until(ExpectedConditions.elementToBeClickable(Elements_Leads.importNextbtn)).click();
 			driver.switchTo().defaultContent();
 			exttest.log(Status.PASS,"Click on Next Btn Pass");
