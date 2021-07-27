@@ -97,6 +97,14 @@
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
 		</dependency>
+	  
+	  <dependency>
+    <groupId>magnitia</groupId>
+    <artifactId>skulixapi</artifactId>
+    <version>0.0</version>
+    <scope>system</scope>
+    <systemPath>${basedir}\src\test\resources\extrajars\sikulixapi.jar</systemPath>
+</dependency>
 		
   </dependencies>
   <build>
