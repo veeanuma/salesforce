@@ -185,12 +185,15 @@ public class ImportLead extends Base
 	{
 		
 		try {
+		String path=System.getProperty("user.dir")+"\\src\\test\\resources\\Datafiles\\importlead.csv";
+				System.out.println(path);
 			Screen s=new Screen();
+			int sn =Screen.getNumberScreens();
+			System.out.println(sn);
+			Screen.getScreen(1);
 			if(s.exists("src\\test\\resources\\testimages\\filename.PNG",10)!=null)
 			{
 				s.click("src\\test\\resources\\testimages\\filename.PNG");
-				String path=System.getProperty("user.dir")+"\\src\\test\\resources\\Datafiles\\importlead.csv";
-				System.out.println(path);
 				s.type(path);
 				s.click("src\\test\\resources\\testimages\\open.PNG");
 			exttest.log(Status.PASS,"Open Window Dialouge  Automation Test  pass");
