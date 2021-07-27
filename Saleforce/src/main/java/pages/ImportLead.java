@@ -106,7 +106,7 @@ public class ImportLead extends Base
 		
 		try {
 			driver.switchTo().frame(0);
-			Thread.sleep(5000);
+			Thread.sleep(10000);
 			wait.until(ExpectedConditions.elementToBeClickable(Elements_Leads.importLeads)).click();
 			driver.switchTo().defaultContent();
 			exttest.log(Status.PASS,"click on  leads pass");
