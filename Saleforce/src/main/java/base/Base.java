@@ -116,6 +116,7 @@ public static  void CloseDriver()
 {
 	su.closeSite(driver);
 	report.flush();
+	
 }	
 
 
