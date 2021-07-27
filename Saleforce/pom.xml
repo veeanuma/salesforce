@@ -103,7 +103,7 @@
     <artifactId>skulixapi</artifactId>
     <version>0.0</version>
     <scope>system</scope>
-    <systemPath>${basedir}\src\test\resources\extrajars\sikulixapi.jar</systemPath>
+    <systemPath>${project.basedir}\src\test\resources\extrajars\sikulixapi.jar</systemPath>
 </dependency>
 		
   </dependencies>
