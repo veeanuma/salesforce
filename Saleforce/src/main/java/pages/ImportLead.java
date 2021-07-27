@@ -184,7 +184,7 @@ public class ImportLead extends Base
 	public Boolean AutomateOpenWindowdialoge() throws Exception
 	{
 		
-		try {
+		/*try {
 		String path=System.getProperty("user.dir")+"\\src\\test\\resources\\Datafiles\\importlead.csv";
 				System.out.println(path);
 			Screen s=new Screen();
@@ -208,7 +208,14 @@ public class ImportLead extends Base
 			exttest.log(Status.FAIL,"Open Window Dialouge  Automation Test failed");
 			takescreenshot();
 			return(false);
-		}
+		}*/
+		
+		
+		Thread.sleep(3000);
+		String path=System.getProperty("user.dir")+"\\src\\test\\resources\\Datafiles\\importlead.csv";
+		System.out.println(path);
+		Runtime.getRuntime().exec("src\\test\\resources\\extrajars\\auupload.exe"+" "+path);
+		Thread.sleep(7000);
 	}
 	
 	
