@@ -1,7 +1,5 @@
 package pages;
 
-import java.io.File;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -160,41 +158,21 @@ public class ImportLead extends Base
 	}
 	public void clickonChoosefile() throws Exception
 	{
-		  try {
-			
+		  Thread.sleep(5000);
+		String path=System.getProperty("user.dir")+"\\src\\test\\resources\\Datafiles\\importlead.csv";
 		driver.switchTo().frame(0);
 		driver.executeScript("arguments[0].scrollIntoView(true);", Elements_Leads.helplink);
-			driver.executeScript("arguments[0].style.display='block';",Elements_Leads.choosefile);
-		//	Elements_Leads.choosefile.sendKeys("C:\\Users\\veeresh\\git\\repository\\Saleforce\\src\\test\\resources\\Datafiles\\importlead.csv");
-			driver.executeScript("arguments[0].style.border='3px solid red'",Elements_Leads.choosefile);
-			Elements_Leads.choosefile.click();
-			//driver.executeScript("arguments[0].click;",Elements_Leads.choosefile);
-			//act.moveToElement(Elements_Leads.choosefile).click();
-			//wait.until(ExpectedConditions.elementToBeClickable(Elements_Leads.choosefile)).click();
-			driver.switchTo().defaultContent();
-			exttest.log(Status.PASS,"click on Choose file  pass");
-			
-			}
-		catch(Exception ex)
-		{
-			exttest.log(Status.FAIL,"click on Choose file  failed");
-			takescreenshot();
-			
-		}
+		driver.executeScript("arguments[0].style.display='block';",Elements_Leads.choosefile);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='file']"))).sendKeys("C:\\Users\\veeresh\\git\\repository\\Saleforce\\src\\test\\resources\\Datafiles\\importlead.csv");
+		driver.switchTo().defaultContent();
 		
 	}
 	
 	public void AutomateOpenWindowdialoge() throws Exception
 	{
 		
-		Thread.sleep(3000);
-		//String path=System.getProperty("user.dir")+"\\src\\test\\resources\\Datafiles\\importlead.csv";
-		String path=new File("\\src\\test\\resources\\Datafiles\\importlead.csv").getAbsolutePath();
-		System.out.println(path);
-		Runtime.getRuntime().exec("src\\test\\resources\\extrajars\\auupload.exe"+" "+path);
-		Thread.sleep(7000);
+
 	}
-	
 	
 	public void clickNext() throws Exception
 	{
