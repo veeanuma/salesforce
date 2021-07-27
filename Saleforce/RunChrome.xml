@@ -9,7 +9,6 @@
     <class name="testSuite.Contacts_Runner" />
     <class name="testSuite.Logout_Runner" />
     
-    
   </classes>
   </test>
 </suite> 
