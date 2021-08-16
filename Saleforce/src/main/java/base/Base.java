@@ -63,7 +63,7 @@ public static void reportintialize() throws Exception
 	driver.manage().window().maximize();
 	
 	
-		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 	   //exthtml = new ExtentHtmlReporter(PropertiesFileUtilities.getValueInPropertiesFile("reportlocation"));
 		String Reportspath="target\\Reports_"+bn+".html";
 	   exthtml = new ExtentHtmlReporter(Reportspath);
