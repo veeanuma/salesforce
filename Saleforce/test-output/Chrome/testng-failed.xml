@@ -5,9 +5,9 @@
     <classes>
       <class name="testSuite.Login_Runner">
         <methods>
+          <include name="setUpClass"/>
           <include name="runScenario" invocation-numbers="0"/>
           <include name="tearDownClass"/>
-          <include name="setUpClass"/>
         </methods>
       </class> <!-- testSuite.Login_Runner -->
     </classes>
