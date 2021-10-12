@@ -50,7 +50,7 @@ Scenario: Click New Lead
     Examples: 
       | Update1        | Update2                                    | Update3                                                                                  |
       | Trying to call | Trying to Make coversation with client.... | client Accepted and going Explanaton of our services and Client Requesting our  Services |
-@regressiontest
+
   Scenario Outline: WebtoLead
     Given User is on salesforce Dashboard Page
     When Navigate to url
@@ -64,7 +64,6 @@ Scenario: Click New Lead
       | Mr.        | Sreenu    | Anuamndla | veeru@gmail.com | 9553109052 | Warangal | Telangana | IBM     |
 
 
-@regressiontest
   Scenario: Import Lead from csv File
     Given User is on salesforce Dashboard Page
     When Click on leads link

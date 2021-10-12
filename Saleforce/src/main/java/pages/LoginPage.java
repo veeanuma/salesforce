@@ -28,23 +28,25 @@ public class LoginPage  extends Base
 	}
 	
 	
-	public void closebtn() throws Exception
+	public Boolean closebtn() throws Exception
 	{ 
-		
+		Boolean b=false;
 		try
 	   {
 			
 			if(wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@title='Close']"))).isDisplayed())
 			{
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@title='Close']"))).click();
+				b=true;
+				
 			}
 			
-			
+			return b;
 			
 	   }
 		catch(Exception ex)
 		{
-		
+		return false;
 		}
 		
 	}
@@ -96,7 +98,7 @@ public class LoginPage  extends Base
 		}
 	}
 	
-	public String validateurl() throws Exception
+	public Boolean validateurl() throws Exception
 	{
 		exttest=report.createTest("Login-Page Test");
 		String x = PropertiesFileUtilities.getValueInPropertiesFile("url");
@@ -107,12 +109,12 @@ public class LoginPage  extends Base
 		if(con.getResponseMessage().equalsIgnoreCase("OK"))
 		{
 			exttest.log(Status.PASS,"Url Working Properly");
-		return "Working";
+		return true;
 		}
 		else
 		{
 			exttest.log(Status.FAIL,"Url Not Working Properly");
-			return "Not Working";
+			return false;
 		}
 	}
 	
