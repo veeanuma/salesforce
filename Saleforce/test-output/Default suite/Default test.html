@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Oct 02 21:32:18 PDT 2021</td>
+<td>Started on:</td><td>Mon Oct 04 04:33:41 PDT 2021</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (11 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1679 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,5 +67,27 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testSuite.Login_Runner.runScenario()'><b>runScenario</b><br>Test class: testSuite.Login_Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Launch Salesforce site and Login", "Optional[validate Login functionality]"</td>
+<td><div><pre>java.lang.NullPointerException
+	at pages.LoginPage.validateurl(LoginPage.java:103)
+	at testSuite.StepDefinations_Login.user_is_on_salesforce_login_page(StepDefinations_Login.java:17)
+	at ?.User is on salesforce Login Page(file:///C:/Users/admin/git/salesforce/Saleforce/src/test/java/testSuite/Login.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace30680757", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace30680757'><pre>java.lang.NullPointerException
+	at pages.LoginPage.validateurl(LoginPage.java:103)
+	at testSuite.StepDefinations_Login.user_is_on_salesforce_login_page(StepDefinations_Login.java:17)
+	at ?.User is on salesforce Login Page(file:///C:/Users/admin/git/salesforce/Saleforce/src/test/java/testSuite/Login.feature:6)
+</pre></div></td>
+<td>0</td>
+<td>testSuite.Login_Runner@22d9d</td></tr>
+</table><p>
 </body>
 </html>

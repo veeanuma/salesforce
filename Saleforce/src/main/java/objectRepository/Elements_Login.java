@@ -5,14 +5,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class Elements_Login {
-	@FindBy(how=How.NAME,using="username")
+	@FindBy(name="username")
 	public static WebElement uid;
-	@FindBy(how=How.NAME,using="pw")
+	@FindBy(name="pw")
 	public static WebElement pwd;
-	@FindBy(how=How.ID,using="Login")
+	@FindBy(id="Login")
 	public static WebElement loginbtn;
 	
-	@FindBy(how=How.XPATH,using="(//*[text()='Home'])[1]")
+	@FindBy(xpath="(//*[text()='Home'])[1]")
 	public static WebElement Homebtn;
 
 }
