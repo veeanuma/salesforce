@@ -105,6 +105,7 @@ public static void Makedelay(WebElement e,RemoteWebDriver driver) throws Excepti
 @AfterSuite
 public static  void CloseDriver()
 {
+	//driver terminated
 	su.closeSite(driver);
 	report.flush();
 	
