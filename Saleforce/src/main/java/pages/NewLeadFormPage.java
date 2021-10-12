@@ -13,6 +13,8 @@ import com.aventstack.extentreports.Status;
 
 import base.Base;
 import objectRepository.Elements_Leads;
+import siteutilities.OperateElement;
+import siteutilities.WebsiteUtility;
 
 public class NewLeadFormPage extends Base
 {
@@ -158,26 +160,13 @@ public class NewLeadFormPage extends Base
 	
 	public void Selectsalutation(String y) throws Exception
 	{
+		WebsiteUtility wb=new WebsiteUtility();;
 		
 		try
 		{
 		WebElement drpsalutation =wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//input[@name='salutation']//parent::div)/following-sibling::div")));
-		driver.executeScript("arguments[0].click();",drpsalutation);
-		List<WebElement>l=drpsalutation.findElements(By.xpath("//*[@class='slds-media__body']//*"));
-		for(WebElement ee:l)
-		{
-			driver.executeScript("arguments[0].scrollIntoView(true);", ee);
-			String x=(String)driver.executeScript("return arguments[0].textContent;", ee);
-				x=x.trim();
-				if(x.equalsIgnoreCase(y))
-				{
-					ee.click();
-					exttest.log(Status.PASS,"Salitation  item selected");
-					break;
-					
-				}
-					
-		}
+		OperateElement.divdropdown(driver,drpsalutation,Elements_Leads.divchild ,y);
+		exttest.log(Status.PASS,"Salitation  item selected");
 	}
 		catch(Exception ex)
 		{
@@ -193,23 +182,8 @@ public class NewLeadFormPage extends Base
 		try
 		{
 		WebElement drpIndustry =wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//*[@class='slds-combobox_container'])[4]//child::div[2]")));
-		driver.executeScript("arguments[0].scrollIntoView(true);", drpIndustry);
-		driver.executeScript("arguments[0].click();",drpIndustry);
-		List<WebElement>l=drpIndustry.findElements(By.xpath("child::*[contains(@data-value,'')]/following-sibling::*//*[@class='slds-media__body']//*"));
-		for(WebElement ee:l)
-		{
-			driver.executeScript("arguments[0].scrollIntoView(true);", ee);
-			String x=(String)driver.executeScript("return arguments[0].textContent;", ee);
-				x=x.trim();
-				if(x.equalsIgnoreCase(y))
-				{
-					ee.click();
-					exttest.log(Status.PASS,"Industry  item selected");
-					break;
-					
-				}
-					
-		}
+		OperateElement.divdropdown(driver,drpIndustry,Elements_Leads.divchild ,y);
+		exttest.log(Status.PASS,"Industry  item selected");
 		}
 		catch(Exception ex)
 		{
@@ -227,27 +201,12 @@ public class NewLeadFormPage extends Base
 		try
 		{
 		WebElement drpLeadsource =wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//*[@class='slds-combobox_container'])[5]//child::div[2]")));
-		driver.executeScript("arguments[0].scrollIntoView(true);", drpLeadsource);
-		driver.executeScript("arguments[0].click();",drpLeadsource);
-		List<WebElement>l=drpLeadsource.findElements(By.xpath("child::*[contains(@data-value,'')]/following-sibling::*//*[@class='slds-media__body']//*"));
-		for(WebElement ee:l)
-		{
-			driver.executeScript("arguments[0].scrollIntoView(true);", ee);
-			String x=(String)driver.executeScript("return arguments[0].textContent;", ee);
-				x=x.trim();
-				if(x.equalsIgnoreCase(y))
-				{
-					ee.click();
-					exttest.log(Status.PASS,"Lead Source item selected");
-					break;
-					
-				}
-					
-		}
+		OperateElement.divdropdown(driver,drpLeadsource,Elements_Leads.divchild ,y);
+		exttest.log(Status.PASS,"Leadsource  item selected");
 		}
 		catch(Exception ex)
 		{
-			exttest.log(Status.FAIL,"Lead Source item  Not  selected");
+			exttest.log(Status.FAIL,"LeadSource item  Not  selected");
 			takescreenshot();
 		}
 	}
@@ -344,7 +303,9 @@ public class NewLeadFormPage extends Base
 		}
 		
 	}
-
+	
+	
+	
 	
 	
 }

@@ -49,6 +49,10 @@ public class Elements_Leads
 	public static WebElement Savebtn;
 	@FindBy(how=How.XPATH,using="//button[@title='Close this window']")
 	public static WebElement Cancelbtn;
+	@FindBy(how=How.XPATH,using="//*[@class='slds-media__body']//*")
+	public static WebElement divchild;
+	
+	
 	
 	
 	@FindBy(how=How.XPATH,using="//span[@data-aura-class='forceActionsText']/parent::*")

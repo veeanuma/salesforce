@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 		
 		features= {"src\\test\\java\\testSuite\\Leads.feature"},
 		glue= {"testSuite"},
-		tags= "@Leads or @sample",
+		tags= "@regressiontest",
 		monochrome=true,
 		plugin= {"pretty","html:target/smoketesters.html","rerun:target/failedsmoketestscenarios.txt"}
 		
