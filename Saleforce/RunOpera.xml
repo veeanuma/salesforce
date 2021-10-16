@@ -5,8 +5,6 @@
   <classes>
   <class name="base.Base" />
   <class name="testSuite.Login_Runner" />
-    <class name="testSuite.Login_Runner" />
-
   </classes>
   </test>
 </suite> 
